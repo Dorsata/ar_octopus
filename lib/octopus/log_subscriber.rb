@@ -17,7 +17,8 @@ module Octopus
     end
 
     def debug_with_octopus_shard(msg)
-      conn = octopus_shard ? color("[Shard: #{octopus_shard}]", ActiveSupport::LogSubscriber::GREEN, true) : ''
+      # conn = octopus_shard ? color("[Shard: #{octopus_shard}]", ActiveSupport::LogSubscriber::GREEN, true) : ''
+      conn = ''
       debug_without_octopus_shard(conn + msg)
     end
   end
